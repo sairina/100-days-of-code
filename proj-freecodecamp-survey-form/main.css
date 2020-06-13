@@ -1,0 +1,22 @@
+body {
+  background: url("https://images.pexels.com/photos/7097/people-coffee-tea-meeting.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+  color: rgb(230, 229, 229);
+}
+
+#title {
+  margin-top: 40px;
+}
+
+#description {
+  margin-bottom: 40px;
+}
+
+.container {
+  max-width: 700px;
+}
+
+#survey-form {
+  padding: 30px;
+  background-color: rgba(28, 27, 31, 0.817);
+  /* 061220 using rgb, can add 4th property for opacity */
+}
