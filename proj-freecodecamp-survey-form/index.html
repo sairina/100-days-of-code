@@ -11,23 +11,30 @@
     <div class="container">
       <div class="row align-items-center">
         <div class="col text-center">
-          <h1 id="title">contact form</h1>
-          <p id="description">explanation</p>
+          <h1 id="title">connect with me</h1>
+          <p id="description">enter some quick info, and let's get in touch.</p>
         </div>
       </div>
 
       <form id="survey-form">
         <div class="form-group">
-          <label for="name">Name</label>
-          <input type="text" class="form-control" id="name" aria-describedby="name" placeholder="Enter your name">
+          <label for="name" id="name-label">Name</label>
+          <input type="text" class="form-control" id="name" aria-describedby="name" placeholder="Enter your name" required>
         </div>
         <div class="form-group">
-          <label for="email">Email</label>
-          <input type="email" class="form-control" id="email" aria-describedby="email" placeholder="Enter your email">
+          <label for="email" id="email-label">Email</label>
+          <input type="email" class="form-control" id="email" aria-describedby="email" placeholder="Enter your email" required>
         </div>
         <div class="form-group">
-          <label for="phone">Phone</label>
-          <input type="tel" class="form-control" id="phone" aria-describedby="phone" placeholder="1(555) 555-5555">
+          <label for="number" id="number-label">Phone (Optional)</label>
+          <input type="number" class="form-control" id="number" aria-describedby="phone" placeholder="5551234567">
+        </div>
+        <div class="form-group">
+          <label for="contact">Best way to contact you:</label>
+          <select class="form-control" id="dropdown">
+            <option>Email</option>
+            <option>Phone</option>
+          </select>
         </div>
         <div class="form-group">
           <label for="contact">Best way to contact you:</label>
