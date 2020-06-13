@@ -8,26 +8,29 @@
 
 <body>
   <div class="container-fluid">
-    <div class="container">
-      <div class="row align-items-center">
-        <div class="col text-center">
-          <h1 id="title">connect with me</h1>
-          <p id="description">enter some quick info, and let's get in touch.</p>
-        </div>
+    <div class="row align-items-center">
+      <div class="col text-center">
+        <h1 id="title">connect with me</h1>
+        <p id="description">share some quick info and let's get in touch.</p>
       </div>
+    </div>
 
+    <div class="container">
       <form id="survey-form">
         <div class="form-group">
           <label for="name" id="name-label">Name</label>
-          <input type="text" class="form-control" id="name" aria-describedby="name" placeholder="Enter your name" required>
+          <input type="text" class="form-control" id="name" aria-describedby="name" placeholder="Enter your name"
+            required>
         </div>
         <div class="form-group">
           <label for="email" id="email-label">Email</label>
-          <input type="email" class="form-control" id="email" aria-describedby="email" placeholder="Enter your email" required>
+          <input type="email" class="form-control" id="email" aria-describedby="email" placeholder="Enter your email"
+            required>
         </div>
         <div class="form-group">
           <label for="number" id="number-label">Phone</label>
-          <input type="number" class="form-control" id="number" aria-describedby="phone" placeholder="5551234567" min="1" required>
+          <input type="number" class="form-control" id="number" aria-describedby="phone" placeholder="5551234567"
+            min="1" max="10" required>
         </div>
         <div class="form-group">
           <label for="contact">Best way to contact you:</label>
@@ -58,8 +61,7 @@
           </div>
         </div>
         <div class="form-group">
-          <label for="interests">I'm interested in:</label>
-          <small id="interests" class="form-text text-muted">(Check all that apply.)</small>
+          <label for="interests">I'm interested in (check all that apply):</label>
           <div class="form-check">
             <input class="form-check-input" type="checkbox" value="collaborate" id="defaultCheck1">
             <label class="form-check-label" for="defaultCheck1">
@@ -85,8 +87,8 @@
         </div>
         <button type="submit" class="btn btn-primary" id="submit">Submit</button>
       </form>
-
     </div>
+
   </div>
   <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 
