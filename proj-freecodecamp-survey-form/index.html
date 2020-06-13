@@ -26,8 +26,8 @@
           <input type="email" class="form-control" id="email" aria-describedby="email" placeholder="Enter your email" required>
         </div>
         <div class="form-group">
-          <label for="number" id="number-label">Phone (Optional)</label>
-          <input type="number" class="form-control" id="number" aria-describedby="phone" placeholder="5551234567">
+          <label for="number" id="number-label">Phone</label>
+          <input type="number" class="form-control" id="number" aria-describedby="phone" placeholder="5551234567" min="1" required>
         </div>
         <div class="form-group">
           <label for="contact">Best way to contact you:</label>
@@ -37,17 +37,23 @@
           </select>
         </div>
         <div class="form-group">
-          <label for="contact">Best way to contact you:</label>
+          <label for="contact">When is the best time of day to reach you?</label>
           <div class="form-check">
-            <input class="form-check-input" type="radio" name="radio" id="emailRadio" value="email" checked>
-            <label class="form-check-label" for="emailRadio">
-              Email
+            <input class="form-check-input" type="radio" name="radio" id="morningRadio" value="morning" checked>
+            <label class="form-check-label" for="morningRadio">
+              Morning
             </label>
           </div>
           <div class="form-check">
-            <input class="form-check-input" type="radio" name="radio" id="phoneRadio" value="radio">
-            <label class="form-check-label" for="phoneRadio">
-              Phone
+            <input class="form-check-input" type="radio" name="radio" id="afternoonRadio" value="afternoon">
+            <label class="form-check-label" for="afternoonRadio">
+              Afternoon
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="radio" id="eveningRadio" value="evening">
+            <label class="form-check-label" for="eveningRadio">
+              Evening
             </label>
           </div>
         </div>
