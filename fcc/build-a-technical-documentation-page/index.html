@@ -20,11 +20,12 @@
     <nav id="navbar">
       <a href="javascript:void(0)" class="close-btn" onclick="closeNav()">&times;</a>
       <header href="#">Stacks and Queues</header>
-      <a class="nav-link" href="#A">A</a>
-      <a class="nav-link" href="#B">B</a>
-      <a class="nav-link" href="#C">C</a>
-      <a class="nav-link" href="#D">D</a>
-      <a class="nav-link" href="#E">E</a>
+      <a class="nav-link" href="#what_is_a_stack?">What is a Stack?</a>
+      <a class="nav-link" href="#big_o_of_stacks">Big O of Stacks</a>
+      <a class="nav-link" href="#implementation_of_a_stack">Implementation of a Stack</a>
+      <a class="nav-link" href="#what_is_a_queue?">What is a Queue?</a>
+      <a class="nav-link" href="#big_o_of_queues">Big O of Queues</a>
+      <a class="nav-link" href="#implementation_of_a_queue">Implementation of a Queue</a>
     </nav>
   </div>
 
@@ -33,25 +34,66 @@
   <!-- page content -->
   <main id="main-doc">
     <div class="container">
-      <section class="row main-section" id="A">
-        <header>A</header>
-        <p>1</p>
-        <p>2</p>
+      <section class="row main-section" id="what_is_a_stack?">
+        <header>What is a Stack?</header>
+        <h2>Tagline: "An abstract data structure that follows LIFO (last in, first out)"</h2>
+        <h3>What you should think about:</h3>
         <ul>
-          <li>a</li>
-          <li>b</li>
-          <li>c</li>
-          <li>d</li>
-          <li>e</li>
+          <li>
+            <p>how you'd eat a "stack" of pancakes</p>
+          </li>
+          <li>
+            <p>a call stack, or how you'd manage function invocation</p>
+          </li>
+          <li>
+            <p>in a doc - undo and redo</p>
+          </li>
+          <li>
+            <p>in React, using the history object with routing</p>
+          </li>
         </ul>
+        <pre>
+          <code>
+            class Stack {
+              constructor() {
+                this.first = null; //like the head in a linked list
+                this.last = null; //like the Tagline
+                this.size = 0;
+              }
+            }
+          </code>
+        </pre>
+      </section>
+      <section class="row main-section" id="big_o_of_stacks">
+        <header>Big O of Stacks</header>
+        <h2>Constant time: O(1)</h2>
+        <p>2</p>
         <code>
           x = 5;<br>
           y = 6;<br>
           z = x + y;
           </code>
       </section>
-      <section class="row main-section" id="B">
-        <header>B</header>
+      <section class="row main-section" id="implementation_of_a_stack">
+        <header>Implementation of a Stack</header>
+        <h3>We can use arrays</h3>
+        <ul>
+          <li>
+            <p>push/pop (preferred, since we're working from the last ones inserted)</p>
+          </li>
+          <li>
+            <p>unshift/shift</p>
+          </li>
+        </ul>
+        <h3>or, linked lists. </h3>
+        <code>
+          x = 5;<br>
+          y = 6;<br>
+          z = x + y;
+          </code>
+      </section>
+      <section class="row main-section" id="what_is_a_queue?">
+        <header>What is a Queue?</header>
         <p>1</p>
         <p>2</p>
         <code>
@@ -60,8 +102,8 @@
           z = x + y;
           </code>
       </section>
-      <section class="row main-section" id="C">
-        <header>C</header>
+      <section class="row main-section" id="big_o_of_queues">
+        <header>Big O of Queues</header>
         <p>1</p>
         <p>2</p>
         <code>
@@ -70,18 +112,8 @@
           z = x + y;
           </code>
       </section>
-      <section class="row main-section" id="D">
-        <header>D</header>
-        <p>1</p>
-        <p>2</p>
-        <code>
-          x = 5;<br>
-          y = 6;<br>
-          z = x + y;
-          </code>
-      </section>
-      <section class="row main-section" id="E">
-        <header>E</header>
+      <section class="row main-section" id="implementation_of_a_queue"">
+        <header>Implementation of a Queue</header>
         <p>1</p>
         <p>2</p>
         <code>
@@ -94,16 +126,16 @@
   </main>
   <!-- /#page-content-wrapper -->
 
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-    crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+  <script src=" https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+          integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+          crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+          integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+          crossorigin="anonymous"></script>
+        <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 </body>
 
 </html>
