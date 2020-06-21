@@ -24,7 +24,7 @@
       <a class="nav-link" href="#big-o_of_stacks">Big-O of Stacks</a>
       <a class="nav-link" href="#implementation_of_a_stack">Implementation of a Stack</a>
       <a class="nav-link" href="#what_is_a_queue?">What is a Queue?</a>
-      <a class="nav-link" href="#big_o_of_queues">Big O of Queues</a>
+      <a class="nav-link" href="#big-o_of_queues">Big-O of Queues</a>
       <a class="nav-link" href="#implementation_of_a_queue">Implementation of a Queue</a>
     </nav>
   </div>
@@ -145,57 +145,73 @@
         </article>
       </section>
 
+      <!-- QUEUES -->
       <section class="main-section" id="what_is_a_queue?">
         <header class="row">What is a Queue?</header>
+        <article>
+          <p class="lead">"An abstract data structure that follows FIFO (first in, first out)"</p>
+          <h3>How should I conceptualize FIFO?</h3>
+          <ul>
+            <li>waiting in line (waiting to join a videogame)</li>
+            <li>downloading/uploading queue</li>
+            <li>a print queue</li>
+          </ul>
+          <h3>Creating the Queue class</h3>
+          <pre>
+          <code>
+            class Queue {
+              constructor() {
+                this.first = first;
+                this.last = last;
+                this.size = 0;
+              }
+            }
+          </code>
+        </pre>
+        </article>
+        <hr>
+
+        <!-- QUEUE BIG-O -->
+        <section class="main-section" id="big-o_of_queues">
+          <header class="row">Big-O of Queues</header>
           <article>
-          <p>1</p>
-          <p>2</p>
-          <code>
+            <p>1</p>
+            <p>2</p>
+            <code>
           x = 5;<br>
           y = 6;<br>
           z = x + y;
           </code>
-        </article>
-      </section>
+          </article>
+        </section>
 
-      <section class="main-section" id="big_o_of_queues">
-        <header class="row">Big O of Queues</header>
-        <article>
-          <p>1</p>
-          <p>2</p>
-          <code>
-          x = 5;<br>
-          y = 6;<br>
-          z = x + y;
-          </code>
-        </article>
-      </section>
+        <section class="main-section" id="implementation_of_a_queue"">
+        <header class=" row">Implementation of a Queue</header>
+          <article>
+            <h4>NOTE: </h4><span>Don't use an array to implement</span>
 
-      <section class="main-section" id="implementation_of_a_queue"">
-        <header class="row">Implementation of a Queue</header>
-        <article>
-        <p>1</p>
-        <p>2</p>
-        <code>
+            <p>1</p>
+            <p>2</p>
+            <code>
           x = 5;<br>
           y = 6;<br>
           z = x + y;
           </code>
-        </article>
-      </section>
+          </article>
+        </section>
     </div>
   </main>
 
   <script src=" https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-        </script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-          integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-          crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-          integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-          crossorigin="anonymous"></script>
-        <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 </body>
 
 </html>
