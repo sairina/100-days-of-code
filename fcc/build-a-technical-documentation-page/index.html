@@ -186,18 +186,74 @@
       </section>
       <hr>
 
+      <!-- QUEUE IMPLEMENTATION -->
       <section class="main-section" id="implementation_of_a_queue"">
         <header class=" row">Implementation of a Queue</header>
         <article>
-          <h4>NOTE: </h4><span>Don't use an array to implement</span>
+          <p class="lead">We can use linked lists</p>
+          <ul>
+            <li>push</li>
+            <li>shift</li>
+            <li>don't use an array to implement!</li>
+          </ul>
+          <p class="lead"><b>Implementing PUSH in Queues as ENQUEUE</b></p>
+          <pre>
+            <code>
+              class Node {
+                constructor(value) {
+                  this.value = value;
+                  this.next = null;
+                }
+              }
 
-          <p>1</p>
-          <p>2</p>
-          <code>
-          x = 5;<br>
-          y = 6;<br>
-          z = x + y;
-          </code>
+              class Queue {
+                constructor(){
+                  this.first = null;
+                  this.last = null;
+                  this.size = 0;
+                }
+
+                enqueue(val){
+                  let newNode = new Node(val);
+                  if(!this.first) {
+                    this.first = newNode;
+                    this.last = newNode;
+                  } else {
+                    this.first.next = newNode;
+                    this.last = newNode;
+                  }
+
+                  return ++this.size;
+                }
+              }
+            </code>
+          </pre>
+          <p class="lead"><b>Implementing SHIFT in Queues as DEQUEUE</b></p>
+          <pre>
+            <code>
+              class Queue {
+                constructor(){
+                  this.first = null;
+                  this.last = null;
+                  this.size = 0;
+                }
+
+                dequeue(){
+                  if(!this.first) return null;
+                  
+                  let removed = this.first;
+                  if (this.first === this.last) {
+                    this.last = null;
+                  }
+
+                  this.first = this.first.next;
+                  this.size--;
+                  
+                  return removed.value;
+                }
+              }
+            </code>
+          </pre>
         </article>
       </section>
     </div>
