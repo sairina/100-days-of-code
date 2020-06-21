@@ -21,7 +21,7 @@
       <a href="javascript:void(0)" class="close-btn" onclick="closeNav()">&times;</a>
       <header href="#">Stacks and Queues</header>
       <a class="nav-link" href="#what_is_a_stack?">What is a Stack?</a>
-      <a class="nav-link" href="#big_o_of_stacks">Big O of Stacks</a>
+      <a class="nav-link" href="#big-o_of_stacks">Big-O of Stacks</a>
       <a class="nav-link" href="#implementation_of_a_stack">Implementation of a Stack</a>
       <a class="nav-link" href="#what_is_a_queue?">What is a Queue?</a>
       <a class="nav-link" href="#big_o_of_queues">Big O of Queues</a>
@@ -34,63 +34,69 @@
   <!-- page content -->
   <main id="main-doc">
     <div class="container">
+
+      <!-- STACKS -->
       <section class="row main-section" id="what_is_a_stack?">
         <header>What is a Stack?</header>
-        <h2>Tagline: "An abstract data structure that follows LIFO (last in, first out)"</h2>
-        <h3>What you should think about:</h3>
-        <ul>
-          <li>
-            <p>how you'd eat a "stack" of pancakes</p>
-          </li>
-          <li>
-            <p>a call stack, or how you'd manage function invocation</p>
-          </li>
-          <li>
-            <p>in a doc - undo and redo</p>
-          </li>
-          <li>
-            <p>in React, using the history object with routing</p>
-          </li>
-        </ul>
-        <pre>
+        <article>
+          <p class="lead">"An abstract data structure that follows LIFO (last in, first out)"</p>
+          <h3>How should I conceptualize LIFO?</h3>
+          <ul>
+            <li>how you'd eat a "stack" of pancakes</li>
+            <li>a call stack, or how you'd manage function invocation</li>
+            <li>in a doc - undo and redo</li>
+            <li>in React, using the history object with routing</li>
+          </ul>
+          <h3>Creating the Stack class</h3>
+          <pre>
           <code>
             class Stack {
               constructor() {
                 this.first = null; //like the head in a linked list
-                this.last = null; //like the Tagline
+                this.last = null; //like the tail
                 this.size = 0;
               }
             }
           </code>
         </pre>
+        </article>
       </section>
-      <section class="row main-section" id="big_o_of_stacks">
-        <header>Big O of Stacks</header>
-        <h2>Constant time: O(1)</h2>
-        <p>2</p>
-        <code>
-          x = 5;<br>
-          y = 6;<br>
-          z = x + y;
-          </code>
+      <hr>
+
+      <!-- STACKS BIG-O -->
+      <section class="row main-section" id="big-o_of_stacks">
+        <header>Big-O of Stacks</header>
+        <article>
+          <p class="lead">Insertion and Removal are in Constant time: O(1)</p>
+          <p><b>Explanation</b></p>
+          <p>Like shift and unshift in linked lists, since insertion and removal are at the last, or "top" of a stack.
+            Similarly, with an array structure, you can have push and pop, as those are the "last" elements inserted in
+            an array, it's easy to find and retrieve them using a stack structure without worrying about re-indexing the
+            whole array.</p>
+        </article>
       </section>
+      <hr>
+
+      <!-- STACK IMPLEMENTATION -->
       <section class="row main-section" id="implementation_of_a_stack">
         <header>Implementation of a Stack</header>
-        <h3>We can use arrays</h3>
-        <ul>
-          <li>
-            <p>push/pop (preferred, since we're working from the last ones inserted)</p>
-          </li>
-          <li>
-            <p>unshift/shift</p>
-          </li>
-        </ul>
-        <h3>or, linked lists. </h3>
-        <code>
+        <article>
+          <h3>We can use arrays</h3>
+          <ul>
+            <li>
+              <p>push/pop (preferred, since we're working from the last ones inserted)</p>
+            </li>
+            <li>
+              <p>unshift/shift</p>
+            </li>
+          </ul>
+          <h3>or, linked lists. </h3>
+          <code>
           x = 5;<br>
           y = 6;<br>
           z = x + y;
           </code>
+        </article>
       </section>
       <section class="row main-section" id="what_is_a_queue?">
         <header>What is a Queue?</header>
