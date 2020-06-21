@@ -81,21 +81,67 @@
       <section class="row main-section" id="implementation_of_a_stack">
         <header>Implementation of a Stack</header>
         <article>
-          <h3>We can use arrays</h3>
+          <p class="lead">We can use arrays</p>
           <ul>
-            <li>
-              <p>push/pop (preferred, since we're working from the last ones inserted)</p>
-            </li>
-            <li>
-              <p>unshift/shift</p>
-            </li>
+            <li>push/pop (preferred, since we're working from the last ones inserted)</li>
+            <li>unshift/shift</li>
           </ul>
-          <h3>or, linked lists. </h3>
-          <code>
-          x = 5;<br>
-          y = 6;<br>
-          z = x + y;
-          </code>
+          <p class="lead">or, we can use linked lists. </p>
+          <p class="lead"><b>Implementing POP in Stack</b></p>
+          <pre>
+            <code>
+              class Stack {
+                constructor(){
+                  this.first = null;
+                  this.last = null;
+                  this.size = 0;
+                }
+
+                pop(){
+                  if(!this.first) return null;
+                  let removed = this.first;
+                  if(this.first === this.last){
+                    this.last = null;
+                  }
+                  this.first = this.first.next;
+                  this.size--;
+                  return removed.value;
+                }
+              }
+            </code>
+          </pre>
+          <p class="lead"><b>Implementing PUSH</b></p>
+          <pre>
+            <code>
+              class Node {
+                constructor(value){
+                  this.value = value;
+                  this.next = null;
+                }
+              }
+
+              class Stack {
+                constructor(){
+                  this.first = null;
+                  this.last = null;
+                  this.size = 0;
+                }
+
+                push(val){
+                  let newNode = new Node(val);
+                  if(!this.first){
+                    this.first = newNode;
+                    this.last = newNode;
+                  } else {
+                    let temp = this.first;
+                    this.first = newNode;
+                    this.first.next = temp;
+                  }
+                  return ++this.size;
+                }
+              }
+            </code>
+          </pre>
         </article>
       </section>
       <section class="row main-section" id="what_is_a_queue?">
