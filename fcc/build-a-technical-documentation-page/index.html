@@ -15,7 +15,7 @@
 </head>
 
 <body>
-  <!-- sidenav -->
+  <!-- SIDENAV -->
   <div class="sidenav" id="sidenav">
     <nav id="navbar">
       <a href="javascript:void(0)" class="close-btn" onclick="closeNav()">&times;</a>
@@ -29,9 +29,16 @@
     </nav>
   </div>
 
-  <h1 onclick="openNav()">open</h1>
+  <!-- HAMBURGER MENU -->
+  <div class="container-fluid">
+    <div class="hamburger mt-3" onclick="openNav(this)">
+      <div class="hamburger-top"></div>
+      <div class="hamburger-middle"></div>
+      <div class="hamburger-bottom"></div>
+    </div>
+  </div>
 
-  <!-- page content -->
+  <!-- PAGE CONTENT -->
   <main id="main-doc">
     <div class="container">
 
@@ -268,7 +275,7 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
-  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+  <!-- <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script> -->
 </body>
 
 </html>
