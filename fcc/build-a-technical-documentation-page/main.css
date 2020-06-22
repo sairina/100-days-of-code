@@ -20,6 +20,14 @@
   transition: 0.3s;
 }
 
+.sidenav header {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 40px;
+  color: #f1f1f1;
+  display: block;
+}
+
 .sidenav a:hover {
   color: #f1f1f1;
 }
@@ -32,13 +40,49 @@
   margin-left: 50px; 
 }
 
+.hamburger {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.hamburger-top, .hamburger-middle, .hamburger-bottom {
+  width: 35px;
+  height: 5px;
+  background-color: red;
+  margin: 6px 0;
+  transition: 0.4s;
+  z-index: 1;
+}
+
+/* Rotate first bar */
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+  transform: rotate(-45deg) translate(-9px, 6px) ;
+}
+
+/* Fade out the second bar */
+.change .bar2 {
+  opacity: 0;
+}
+
+/* Rotate last bar */
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+  transform: rotate(45deg) translate(-8px, -8px) ;
+}
+
 #main-doc {
   transition: margin-left .5s;
   padding: 20px;
 }
 
-header {
-  font-size: 45px;
+#main-doc header {
+  color: #000000;
+  font-size: 50px;
+}
+
+#big-o_of_stacks, #big-o_of_queues {
+  margin-bottom: 50px;
 }
 
 @media screen and (max-height: 450px) {
