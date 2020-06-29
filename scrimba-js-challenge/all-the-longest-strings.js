@@ -19,6 +19,7 @@ function allLongestStrings(array) {
   return longest[highestKey];
 }
 
+// return array.sort((a, b) => b.length - a.length).filter(element => element.length == array[0].length);
 
 
 /**
