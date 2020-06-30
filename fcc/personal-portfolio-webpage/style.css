@@ -1,0 +1,15 @@
+#welcome-section {
+  background-color: #222225;
+}
+
+#welcome-section h1 {
+  color: #f0f0f0;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 4rem;
+}
+
+#welcome-section p {
+  font-size: 30px;
+  color: #BE3144;
+}
