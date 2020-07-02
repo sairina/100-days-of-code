@@ -3,6 +3,11 @@ body {
   font-size: 10px;
 }
 
+/* navbar */
+#navbar {
+  font-size: 20px;
+}
+
 /* welcome section */
 #welcome-section {
   background-color: #222225;
@@ -11,7 +16,7 @@ body {
 #welcome-section h1 {
   color: #f0f0f0;
   font-weight: 700;
-  font-size: 5rem;
+  font-size: 4.5rem;
 }
 
 #welcome-section p {
@@ -40,6 +45,7 @@ body {
 /* contact */
 #contact {
   background-color: #303841;
+  height: 80vh;
 }
 
 #contact h2 {
@@ -50,4 +56,19 @@ body {
 
 #contact p {
   color:#f0f0f0;
+}
+
+/* footer */
+footer {
+  background-color: #303841;
+  border-top: 2px solid #BE3144;
+}
+
+footer p, a {
+  margin-top: 20px;
+  color: #f0f0f0;
+}
+
+footer a:hover {
+  color: #f0f0f0;
 }
