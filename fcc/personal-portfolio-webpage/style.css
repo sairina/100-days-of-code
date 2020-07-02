@@ -6,6 +6,7 @@ body {
 /* navbar */
 #navbar {
   font-size: 20px;
+  background-color: #BE3144 !important;
 }
 
 /* welcome section */
@@ -27,7 +28,7 @@ body {
 /* projects/work */
 #projects {
   background-color: #45567D;
-  padding: 80px 0 80px 0;
+  padding: 8rem 0 8rem 0;
 }
 
 #projects h2 {
@@ -45,7 +46,7 @@ body {
 /* contact */
 #contact {
   background-color: #303841;
-  height: 80vh;
+  height: 85vh;
 }
 
 #contact h2 {
@@ -61,11 +62,11 @@ body {
 /* footer */
 footer {
   background-color: #303841;
-  border-top: 2px solid #BE3144;
+  border-top: 3px solid #BE3144;
 }
 
 footer p, a {
-  padding-top: 2rem;
+  padding-top: 1.8rem;
   color: #f0f0f0;
 }
 
