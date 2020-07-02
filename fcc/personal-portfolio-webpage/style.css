@@ -1,3 +1,8 @@
+body {
+  font-family: 'Raleway', sans-serif;
+  font-size: 10px;
+}
+
 /* welcome section */
 #welcome-section {
   background-color: #222225;
@@ -5,9 +10,8 @@
 
 #welcome-section h1 {
   color: #f0f0f0;
-  font-family: 'Raleway', sans-serif;
   font-weight: 700;
-  font-size: 4rem;
+  font-size: 5rem;
 }
 
 #welcome-section p {
@@ -23,10 +27,27 @@
 
 #projects h2 {
   color: #f0f0f0;
+  font-size: 3rem;
+  font-weight: 700;
   border-bottom: 2px solid #f0f0f0;
   margin-bottom: 40px;
 }
 
 .project-tile {
   margin-bottom: 40px;
+}
+
+/* contact */
+#contact {
+  background-color: #303841;
+}
+
+#contact h2 {
+  color: #f0f0f0;
+  font-weight: 700;
+  font-size: 4rem;
+}
+
+#contact p {
+  color:#f0f0f0;
 }
