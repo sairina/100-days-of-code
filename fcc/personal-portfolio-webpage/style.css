@@ -28,7 +28,8 @@ body {
 /* projects/work */
 #projects {
   background-color: #45567D;
-  padding: 8rem 0 8rem 0;
+  padding-top: 6rem;
+  padding-bottom: 50rem;
 }
 
 #projects h2 {
@@ -40,7 +41,7 @@ body {
 }
 
 .project-tile {
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
 /* contact */
