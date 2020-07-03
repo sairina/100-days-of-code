@@ -1,0 +1,4 @@
+[build]
+base = "100-days-of-codefcc/personal-portfolio-webpage"
+publish = "personal-portfolio-webpage/"
+command = "npm run build"
