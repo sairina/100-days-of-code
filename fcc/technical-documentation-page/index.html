@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="main.css">
+  <script src="index.js"></script>
+
+  <title>FCC Technical Documentation Page: Queues and Stacks</title>
+</head>
+
+<body>
+  <!-- SIDENAV -->
+  <div class="sidenav" id="sidenav">
+    <nav id="navbar">
+      <a href="javascript:void(0)" class="close-btn" onclick="closeNav()">&times;</a>
+      <header href="#">Stacks and Queues</header>
+      <a class="nav-link" href="#what_is_a_stack?">What is a Stack?</a>
+      <a class="nav-link" href="#big-o_of_stacks">Big-O of Stacks</a>
+      <a class="nav-link" href="#implementation_of_a_stack">Implementation of a Stack</a>
+      <a class="nav-link" href="#what_is_a_queue?">What is a Queue?</a>
+      <a class="nav-link" href="#big-o_of_queues">Big-O of Queues</a>
+      <a class="nav-link" href="#implementation_of_a_queue">Implementation of a Queue</a>
+    </nav>
+  </div>
+
+  <!-- HAMBURGER MENU -->
+  <div class="container-fluid">
+    <div class="hamburger mt-3" onclick="openNav(this)">
+      <div class="hamburger-top"></div>
+      <div class="hamburger-middle"></div>
+      <div class="hamburger-bottom"></div>
+    </div>
+  </div>
+
+  <!-- PAGE CONTENT -->
+  <main id="main-doc">
+    <div class="container">
+
+      <!-- STACKS -->
+      <section class="main-section" id="what_is_a_stack?">
+        <header class="row">What is a Stack?</header>
+        <article>
+          <p class="lead">"An abstract data structure that follows LIFO (last in, first out)"</p>
+          <h3>How should I conceptualize LIFO?</h3>
+          <ul>
+            <li>how you'd eat a "stack" of pancakes</li>
+            <li>a call stack, or how you'd manage function invocation</li>
+            <li>in a doc - undo and redo</li>
+            <li>in React, using the history object with routing</li>
+          </ul>
+          <h3>Creating the Stack class</h3>
+          <pre>
+          <code>
+            class Stack {
+              constructor() {
+                this.first = null; //like the head in a linked list
+                this.last = null; //like the tail
+                this.size = 0;
+              }
+            }
+          </code>
+        </pre>
+        </article>
+      </section>
+      <hr>
+
+      <!-- STACKS BIG-O -->
+      <section class="main-section" id="big-o_of_stacks">
+        <header class="row">Big-O of Stacks</header>
+        <article>
+          <p class="lead">Insertion and Removal are in Constant time: O(1)</p>
+          <p><b>Explanation</b></p>
+          <p>Like shift and unshift in linked lists, since insertion and removal are at the last, or "top" of a stack.
+            Similarly, with an array structure, you can have push and pop, as those are the "last" elements inserted in
+            an array, it's easy to find and retrieve them using a stack structure without worrying about re-indexing the
+            whole array.</p>
+        </article>
+      </section>
+      <hr>
+
+      <!-- STACK IMPLEMENTATION -->
+      <section class="main-section" id="implementation_of_a_stack">
+        <header class="row">Implementation of a Stack</header>
+        <article>
+          <p class="lead">We can use arrays</p>
+          <ul>
+            <li>push/pop (preferred, since we're working from the last ones inserted)</li>
+            <li>unshift/shift</li>
+          </ul>
+          <p class="lead">or, we can use linked lists. </p>
+          <p class="lead"><b>Implementing POP in Stack</b></p>
+          <pre>
+            <code>
+              class Stack {
+                constructor(){
+                  this.first = null;
+                  this.last = null;
+                  this.size = 0;
+                }
+
+                pop(){
+                  if(!this.first) return null;
+                  let removed = this.first;
+                  if(this.first === this.last){
+                    this.last = null;
+                  }
+                  this.first = this.first.next;
+                  this.size--;
+                  return removed.value;
+                }
+              }
+            </code>
+          </pre>
+          <p class="lead"><b>Implementing PUSH</b></p>
+          <pre>
+            <code>
+              class Node {
+                constructor(value){
+                  this.value = value;
+                  this.next = null;
+                }
+              }
+
+              class Stack {
+                constructor(){
+                  this.first = null;
+                  this.last = null;
+                  this.size = 0;
+                }
+
+                push(val){
+                  let newNode = new Node(val);
+                  if(!this.first){
+                    this.first = newNode;
+                    this.last = newNode;
+                  } else {
+                    let temp = this.first;
+                    this.first = newNode;
+                    this.first.next = temp;
+                  }
+                  return ++this.size;
+                }
+              }
+            </code>
+          </pre>
+        </article>
+      </section>
+      <hr>
+
+      <!-- QUEUES -->
+      <section class="main-section" id="what_is_a_queue?">
+        <header class="row">What is a Queue?</header>
+        <article>
+          <p class="lead">"An abstract data structure that follows FIFO (first in, first out)"</p>
+          <h3>How should I conceptualize FIFO?</h3>
+          <ul>
+            <li>waiting in line (waiting to join a videogame)</li>
+            <li>downloading/uploading queue</li>
+            <li>a print queue</li>
+          </ul>
+          <h3>Creating the Queue class</h3>
+          <pre>
+          <code>
+            class Queue {
+              constructor() {
+                this.first = first;
+                this.last = last;
+                this.size = 0;
+              }
+            }
+          </code>
+        </pre>
+        </article>
+      </section>
+      <hr>
+
+      <!-- QUEUE BIG-O -->
+      <section class="main-section" id="big-o_of_queues">
+        <header class="row">Big-O of Queues</header>
+        <article>
+          <p class="lead">Insertion and Removal are in Constant time: O(1)</p>
+          <p><b>Explanation</b></p>
+          <p>Using a linked list, we can <b>enqueue</b> (add to the back, so use <em>push</em>) and <b>dequeue</b>
+            (remove from front, so use <em>shift</em>). Otherwise, you'll have to traverse all the way to the end of a
+            linked list before finding and removing. NOTE: Don't use an array for the same reason!</p>
+        </article>
+      </section>
+      <hr>
+
+      <!-- QUEUE IMPLEMENTATION -->
+      <section class="main-section" id="implementation_of_a_queue"">
+        <header class=" row">Implementation of a Queue</header>
+        <article>
+          <p class="lead">We can use linked lists</p>
+          <ul>
+            <li>push</li>
+            <li>shift</li>
+            <li>don't use an array to implement!</li>
+          </ul>
+          <p class="lead"><b>Implementing PUSH in Queues as ENQUEUE</b></p>
+          <pre>
+            <code>
+              class Node {
+                constructor(value) {
+                  this.value = value;
+                  this.next = null;
+                }
+              }
+
+              class Queue {
+                constructor(){
+                  this.first = null;
+                  this.last = null;
+                  this.size = 0;
+                }
+
+                enqueue(val){
+                  let newNode = new Node(val);
+                  if(!this.first) {
+                    this.first = newNode;
+                    this.last = newNode;
+                  } else {
+                    this.first.next = newNode;
+                    this.last = newNode;
+                  }
+
+                  return ++this.size;
+                }
+              }
+            </code>
+          </pre>
+          <p class="lead"><b>Implementing SHIFT in Queues as DEQUEUE</b></p>
+          <pre>
+            <code>
+              class Queue {
+                constructor(){
+                  this.first = null;
+                  this.last = null;
+                  this.size = 0;
+                }
+
+                dequeue(){
+                  if(!this.first) return null;
+                  
+                  let removed = this.first;
+                  if (this.first === this.last) {
+                    this.last = null;
+                  }
+
+                  this.first = this.first.next;
+                  this.size--;
+                  
+                  return removed.value;
+                }
+              }
+            </code>
+          </pre>
+        </article>
+      </section>
+    </div>
+  </main>
+
+  <script src=" https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <!-- <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script> -->
+</body>
+
+</html>
