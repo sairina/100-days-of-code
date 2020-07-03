@@ -57,6 +57,14 @@ body {
 
 #contact p {
   color:#f0f0f0;
+  font-size: 20px;
+  margin-bottom: 100px;
+}
+
+#contact a, a:hover {
+  color:#f0f0f0;
+  font-size: 20px;
+  margin-right: 20px;
 }
 
 /* footer */
