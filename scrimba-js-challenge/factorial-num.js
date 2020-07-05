@@ -7,8 +7,10 @@ function factorialNumber(num) {
   
   // return product;
   
-  if (num <= 1) return 1;
-  return num * factorialNumber(num - 1);
+  // if (num <= 1) return 1;
+  // return num * factorialNumber(num - 1);
+
+  return num <=1 ? 1 : num * factorialNumber(num - 1);
 }
 
 
