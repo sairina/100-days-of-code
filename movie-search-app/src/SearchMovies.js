@@ -1,4 +1,5 @@
 import React from 'react';
+import './SearchMovies.css';
 
 export default function SearchMovies() {
   return (
