@@ -34,17 +34,17 @@ export default function SearchMovies() {
         <button className='button' type='submit'>Search</button>
       </form>
 
-      <div className='CardList'>
+      <div className='Card-list'>
         {movies.filter(movie => movie.poster_path).map(movie => (
           <div className='Card' key={movie.id}>
-            <img className='CardImg' src={`https://image.tmdb.org/t/p/w185_and_h278_bestv2/${movie.poster_path}`}
+            <img className='Card--image' src={`https://image.tmdb.org/t/p/w185_and_h278_bestv2/${movie.poster_path}`}
               alt={movie.title + ' poster'}
             />
-            <div className='CardContent'>
-              <h3 className='MovieTitle'>{movie.title}</h3>
+            <div className='Card-content'>
+              <h3 className='Card--title'>{movie.title}</h3>
               <p><small>RELEASE DATE: {movie.release_date}</small></p>
               <p><small>RATING: {movie.vote_average}</small></p>
-              <p className='CardDesc'>{movie.overview}</p>
+              <p className='Card-desc'>{movie.overview}</p>
             </div>
           </div>
         ))}
