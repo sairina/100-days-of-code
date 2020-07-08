@@ -5,8 +5,10 @@ import SearchMovies from './SearchMovies';
 function App() {
   return (
     <div className="App">
-      <h1>React Movie Search</h1>
-      <SearchMovies />
+      <div className='container'>
+        <h1>React Movie Search</h1>
+        <SearchMovies />
+      </div>
     </div>
   );
 }
