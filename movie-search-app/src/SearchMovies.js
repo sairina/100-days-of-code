@@ -21,7 +21,7 @@ export default function SearchMovies() {
     <form className='form' onSubmit={searchMovies}>
       <label className='label' htmlFor='query'>Movie Title</label>
       <input className='input' type='text' name='query' placeholder='e.g. Jurassic Park' />
-      <button className='button' type='submit'>Click Me</button>
+      <button className='button' type='submit'>Search</button>
     </form>
   );
 }
