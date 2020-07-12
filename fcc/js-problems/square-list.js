@@ -3,8 +3,14 @@
 const squareList = (arr) => {
   // Only change code below this line
   
-  return arr.filter(num => (num > 0 && num % 1 === 0)).map(num => num * num);
+  //with filter and map
+  // return arr.filter(num => (num > 0 && num % 1 === 0)).map(num => num * num);
   
+  //with reduce
+  return arr.reduce((acc, num) => {
+    return num > 0 && (num % 1 === 0) ? [...acc, Math.pow(num, 2)] : acc;
+  })
+
   // Only change code above this line
 };
 
