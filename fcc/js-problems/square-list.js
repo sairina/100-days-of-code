@@ -9,7 +9,7 @@ const squareList = (arr) => {
   //with reduce
   return arr.reduce((acc, num) => {
     return num > 0 && (num % 1 === 0) ? [...acc, Math.pow(num, 2)] : acc;
-  })
+  }, [])
 
   // Only change code above this line
 };
