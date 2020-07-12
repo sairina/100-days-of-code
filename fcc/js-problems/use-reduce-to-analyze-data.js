@@ -114,10 +114,18 @@ var watchList = [
 
 function getRating(watchList) {
   // Only change code below this line
-  let averageRating = watchList.filter(movie =>
-    movie.Director === "Christopher Nolan").map(rating => +rating.imdbRating).reduce((sum, rating) => (sum + rating)) / watchList.filter(movie =>
-      movie.Director === "Christopher Nolan").length;
+  // let averageRating = watchList.filter(movie =>
+  //   movie.Director === "Christopher Nolan").map(rating => +rating.imdbRating).reduce((sum, rating) => (sum + rating)) / watchList.filter(movie =>
+  //     movie.Director === "Christopher Nolan").length;
 
+  let count = 0;
+  let averageRating = watchList.reduce((sum, movie) => {
+    if (movie.Director === "Christopher Nolan") {
+      count += 1;
+      return sum + parseInt(movie.imdbRating);
+    }
+    return sum;
+  }, 0) / count;
   // Only change code above this line
   return averageRating;
 }
