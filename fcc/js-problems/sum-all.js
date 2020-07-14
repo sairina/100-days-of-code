@@ -1,13 +1,7 @@
 function sumAll(arr) {
   let sum = 0;
-  if(arr[0] < arr[1]) {
-    for (let i = arr[0]; i <= arr[1]; i++) {
-      sum += i;
-    }
-  } else {
-    for (let j = arr[1]; j <= arr[0]; j++) {
-      sum += j;
-    }
+  for (let i = Math.min(...arr); i <= Math.max(...arr); i++){
+    sum += i;
   }
   return sum;
 }
