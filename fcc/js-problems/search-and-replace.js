@@ -24,16 +24,24 @@ Preserve the case of the first character in the original word when you are repla
 //   return arr.join(' ');
 // }
 
-function myReplace(str, before, after) {
-  let index = str.indexOf(before);
+// function myReplace(str, before, after) {
+//   let index = str.indexOf(before);
 
-  if (str[index] === str[index].toUpperCase()) {
+//   if (str[index] === str[index].toUpperCase()) {
+//     after = after[0].toUpperCase() + after.slice(1);
+//   }
+
+//   str = str.replace(before, after);
+
+//   return str;
+// }
+
+function myReplace(str, before, after) {
+  if (before[0] === before[0].toUpperCase()) {
     after = after[0].toUpperCase() + after.slice(1);
   }
-
-  str = str.replace(before, after);
-
-  return str;
+  
+  return str.replace(before, after);
 }
 
 myReplace("A quick brown fox jumped over the lazy dog", "jumped", "leaped");
