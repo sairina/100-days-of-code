@@ -26,3 +26,38 @@ function isPrime(n) {
 
 sumPrimes(10);
 //2, 3, 5, 7
+
+/* using sieve of eratosthenes */
+
+function sumPrimes(num) {
+  //with sieve of eratosthenes
+  
+  let sieve = [];
+  let primes = [];
+
+  //make sieve
+  for (let i = 0; i <= num; i++) {
+    sieve.push(true);
+  }
+  
+  //check sieve for multiples
+  for (let i = 2; i <= num; i++) {
+    for (let j = i * i; j <= num; j += i) {
+      if (sieve[j]) {
+        sieve[j] = false;
+      }
+    }
+  }
+
+  //push to array of primes and sum
+  for (let i = 2; i <= num; i++) {
+    if (sieve[i]) {
+      primes.push(i);
+    }
+  }
+
+  return primes.reduce((val, acc) => val + acc, 0);
+}
+
+sumPrimes(10); //2, 3, 5, 7
+
